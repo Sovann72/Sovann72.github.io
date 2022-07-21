@@ -184,7 +184,7 @@ body {
   transition-property: transform;
 }
 .SM-div > .SM-logo > a:hover img {
-  transform: translateX(-.5rem);
+  /* transform: translateX(-.5rem); */
   transform: scale(0.8);
 }
 
@@ -196,4 +196,38 @@ body {
   justify-content: space-around;
   align-items: center;
   color: white;
+}
+
+
+
+@media (max-width: 768px){
+  .container-fluid {
+    width: min(100%, 768px);
+  }
+  .content {
+    grid-template-rows: 400px 400px 700px 130px;
+    gap: 50px;
+  }
+  .pic1 {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+  .para2 {
+    grid-area: 2 / 1 / span 1 / span 2;
+    align-items: center;
+  }
+  .btn3 {
+    grid-area: 3 / 1 / span 1 / span 2;
+  }
+  .des {
+    padding-inline: 20px;
+    box-sizing: border-box;
+  }
+  .des > p {
+    max-width: 400px;
+    font-size: 0.9rem;
+  }
+  .SM-div {
+    grid-area: 4 / 1 / span 1 / span 2;
+  }
+
 }
