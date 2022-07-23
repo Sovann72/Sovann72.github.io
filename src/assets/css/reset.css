@@ -1,0 +1,21 @@
+@import url('../font/battambang/battambang.css');
+/* font-family: 'Battambang', sans-serif; */
+@import url('../font/Roboto/roboto.css');
+/* font-family: 'roboto', sans-serif; */
+
+
+h1, h2, h3 {
+  margin: 0px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'roboto', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
