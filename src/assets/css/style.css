@@ -60,7 +60,7 @@ body {
   transform:translate(25%);
 }
 .nav > a > li {
-  color: white;
+  color: rgba(255, 255, 255, 0.832);
 }
 .nav > a:hover li {
   color: var(--secondary-color);
@@ -80,13 +80,27 @@ body {
   align-items: center;
   grid-area: 1 / 1 / span 1 / span 2;
 }
-.landing-pic {
-  background-image: url(../../img/540w_320h_landingPic.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.land-pic-wrapper {
   width: 100%;
   height: 95%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.land-pic-wrapper:hover .landing-pic{
+  transform: scale(1.05);
+}
+.landing-pic {
+  
+  background-image: url(../../img/540w_320h_landingPic.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: transform 200ms ease-in;
+}
+.landing-pic:hover {
+  /* background-size: 200%; */
 }
 .para2 {
   display: flex;
@@ -105,7 +119,7 @@ body {
   font-size: 0.95rem;
 }
 .para2 > p > span {
-  background-image: linear-gradient(30deg ,#116A9C, rgb(255, 255, 255));
+  background-image: linear-gradient(45deg ,#fc0047, rgb(0, 132, 255));
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -133,6 +147,7 @@ body {
 }
 .para2 > a > p {
   color: var(--secondary-color);
+  font-size: 0.8rem;
   font-weight: 600;
 }
 .btn3 {
@@ -174,7 +189,7 @@ body {
   max-width: 250px;
 }
 .des > p > span {
-  background-image: linear-gradient(30deg ,#116A9C, rgb(255, 255, 255));
+  background-image: linear-gradient(45deg ,#fc0047, rgb(0, 132, 255));
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -226,9 +241,26 @@ body {
   font-size: 0.8rem;
 }
 
-@media (min-width: 620px){
+@media (min-width: 680px){
   .container {
-    width: 90%;
+    width: 85%;
+  }
+  .nav {
+    flex-direction: row;
+    height: 30px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .nav > a {
+    transition: none;
+    padding: 5px 10px;
+  }
+  .nav > a:hover {
+    color: white;
+    transform: none;
+  }
+  .nav > a:hover li {
+    color: white;
   }
   .content {
     
@@ -241,5 +273,25 @@ body {
   }
   .btn3 {
     margin-top: -50px;
+  }
+}
+
+@media(min-width: 1024px){
+  .container {
+    width: 90%;
+  }
+  .content {
+
+  }
+  .para2 {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  .btn3 {
+    margin-top: 0px;
+    grid-area: 1 / 2 / span 2 / span 1;
+  }
+  .pic1 > .landing-pic {
+    background-size:cover;
+    background-position-y: 25%;
   }
 }
