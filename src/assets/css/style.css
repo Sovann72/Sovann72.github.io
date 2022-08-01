@@ -6,7 +6,11 @@
 :root {
   --main-color: #06283D;
   --secondary-color: #116A9C;
-  --light-secondary-color: #11699c83;
+  --light-para-color: #8cbfdc8a;
+  --heavy-para-color: #8cbfdc;
+  --css-color: #97c0db;
+  --html-color: #F16529;
+  --js-color: #F2BF22;
 }
 
 h1, h2, h3 {
@@ -124,9 +128,11 @@ body {
   background-repeat: no-repeat;
   background-position: left bottom;
   transition: background-size 500ms ease;
+  color: var(--light-para-color);
 }
 .para2 > p > span:hover {
   background-size: 100% 1px;
+  color: var(--heavy-para-color);
 }
 .para2 > a {
   display: flex;
@@ -203,6 +209,15 @@ body {
 }
 .des > p > span:hover {
   background-size: 100% 1px;
+}
+.html > p > span {
+  color: var(--html-color);
+}
+.css > p > span {
+  color: var(--css-color);
+}
+.js > p > span {
+  color: var(--js-color);
 }
 .SM-div {
   display: flex;
