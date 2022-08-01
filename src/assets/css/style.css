@@ -162,16 +162,22 @@ body {
   align-items: center;
 }
 .skills-wrapper {
+  max-width: 100%;
+  max-height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skills-wrapper > img {
+.skills-wrapper > a {
   width: min(30%, 120px);
   height: auto;
   transition: transform 250ms ease;
 }
-.skills-wrapper > img:hover {
+.skills-wrapper > a > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.skills-wrapper > a:hover {
   transform: scale(1.1);
 }
 .skills-des-wrapper {
@@ -293,5 +299,8 @@ body {
   .pic1 > .landing-pic {
     background-size:cover;
     background-position-y: 25%;
+  }
+  .SM-div {
+    margin-top: -50px;
   }
 }
