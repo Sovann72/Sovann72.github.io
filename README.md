@@ -1,11 +1,6 @@
-# glowing-potato
-A portfolio website of mine built with HTML, CSS, Vanilla JS.
-
 
 ## sovann72
-> Cool stuff need time.
+A portfolio of mine built with HTML, CSS, JS.
 
-## Repo Name History
-  - glowing-potato
-  - glowing-potato.github.io
-  - Sovann72.github.io
+
+> Cool stuffs take time.
