@@ -315,6 +315,12 @@ body {
   font-size: 0.8rem;
 }
 
+@media (min-width: 320px){
+  body {
+    overflow-x: hidden;
+  }
+}
+
 @media (min-width: 680px){
   .container {
     width: 85%;
