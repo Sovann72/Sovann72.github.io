@@ -10,9 +10,6 @@ const jsLogoStyle = jsLogo.style;
 
 // skillset logo animation begin
 function beginSkillsWrapperDefaultAnimation(){
-  // htmlLogoStyle.display = 'none';
-  // cssLogoStyle.display = 'none';
-  // jsLogoStyle.display = 'none';
   htmlLogoStyle.transform = 'translateX(-100px)';
   cssLogoStyle.transform = 'translateY(100px)';
   jsLogoStyle.transform = 'translateX(100px)';
@@ -21,30 +18,26 @@ function beginSkillsWrapperDefaultAnimation(){
 
 // skillset logo animation begin
 function finishedSkillsWrapperDefaultAnimation(){
-  // htmlLogoStyle.display = 'block';
-  // cssLogoStyle.display = 'block';
-  // jsLogoStyle.display = 'block';
   htmlLogoStyle.transform = 'translateX(0)';
   cssLogoStyle.transform = 'translateY(0)';
   jsLogoStyle.transform = 'translateX(0)';
   return (htmlLogoStyle && cssLogoStyle && jsLogoStyle);
 }
 
+beginSkillsWrapperDefaultAnimation();
 // when user scroll let skillset logo come together
 window.addEventListener('load', ()=>{
-  finishedSkillsWrapperDefaultAnimation();
-    if (innerWidth < 680){
-      beginSkillsWrapperDefaultAnimation();
-      if(innerHeight > skillsWrapper.offsetTop){
-        finishedSkillsWrapperDefaultAnimation();
-      }
-      window.addEventListener('scroll', ()=>{
-        if(scrollY >= skillsWrapper.offsetTop-innerHeight){
-          finishedSkillsWrapperDefaultAnimation();
-        }
-        else if(scrollY < skillsWrapper.offsetTop-innerHeight){
-          beginSkillsWrapperDefaultAnimation();
-        }
-      })
-    }
+  if(innerHeight > skillsWrapper.offsetTop){
+    finishedSkillsWrapperDefaultAnimation();
+  }
+})
+
+
+window.addEventListener('scroll', ()=>{
+  if(scrollY >= skillsWrapper.offsetTop-innerHeight){
+    finishedSkillsWrapperDefaultAnimation();
+  }
+  else if(scrollY < skillsWrapper.offsetTop-innerHeight){
+    beginSkillsWrapperDefaultAnimation();
+  }
 })
