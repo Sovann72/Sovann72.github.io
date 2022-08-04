@@ -208,7 +208,7 @@ body {
   height: auto;
   transition: transform 500ms ease-in-out;
 }
-.skills-wrapper > a:nth-child(1)  {
+/* .skills-wrapper > a:nth-child(1)  {
   transform: translateX(-100px);
 }
 .skills-wrapper > a:nth-child(2){
@@ -216,7 +216,7 @@ body {
 }
 .skills-wrapper > a:nth-child(3){
   transform: translateX(100px);
-}
+} */
 .skills-wrapper > a > img {
   transition: transform 200ms ease-in-out;
 }
@@ -316,7 +316,7 @@ body {
 }
 
 @media (min-width: 320px){
-  body {
+  .container {
     overflow-x: hidden;
   }
 }
