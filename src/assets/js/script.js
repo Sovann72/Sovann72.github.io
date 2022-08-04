@@ -25,12 +25,13 @@ function finishedSkillsWrapperDefaultAnimation(){
 
 
 window.addEventListener('load', ()=>{
-  // beginSkillsWrapperDefaultAnimation();
-  if(innerWidth < 1024){ //1024 breakpoint
-    finishedSkillsWrapperDefaultAnimation();
+  finishedSkillsWrapperDefaultAnimation();
 
     if (innerWidth < 680){
       beginSkillsWrapperDefaultAnimation();
+      if(innerHeight > skillsWrapper.offsetTop){
+        finishedSkillsWrapperDefaultAnimation();
+      }
       window.addEventListener('scroll', ()=>{
         if(scrollY >= skillsWrapper.offsetTop-innerHeight){
           finishedSkillsWrapperDefaultAnimation();
@@ -40,8 +41,4 @@ window.addEventListener('load', ()=>{
         }
       })
     }
-  }
-  else {
-    finishedSkillsWrapperDefaultAnimation();
-  }
 })
